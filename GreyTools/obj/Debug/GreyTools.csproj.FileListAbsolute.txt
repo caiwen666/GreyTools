@@ -1,0 +1,14 @@
+C:\Users\Administrator\source\repos\GreyTools\GreyTools\bin\Debug\GreyTools.exe.config
+C:\Users\Administrator\source\repos\GreyTools\GreyTools\bin\Debug\GreyTools.exe
+C:\Users\Administrator\source\repos\GreyTools\GreyTools\bin\Debug\GreyTools.pdb
+C:\Users\Administrator\source\repos\GreyTools\GreyTools\bin\Debug\NetDimension.NanUI.dll
+C:\Users\Administrator\source\repos\GreyTools\GreyTools\bin\Debug\NetDimension.NanUI.pdb
+C:\Users\Administrator\source\repos\GreyTools\GreyTools\obj\Debug\GreyTools.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\GreyTools\GreyTools\obj\Debug\GreyTools.Properties.Resources.resources
+C:\Users\Administrator\source\repos\GreyTools\GreyTools\obj\Debug\GreyTools.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\GreyTools\GreyTools\obj\Debug\GreyTools.csproj.CopyComplete
+C:\Users\Administrator\source\repos\GreyTools\GreyTools\obj\Debug\GreyTools.exe
+C:\Users\Administrator\source\repos\GreyTools\GreyTools\obj\Debug\GreyTools.pdb
+C:\Users\Administrator\source\repos\GreyTools\GreyTools\obj\Debug\GreyTools.Form1.resources
+C:\Users\Administrator\source\repos\GreyTools\GreyTools\bin\Debug\GreyTools.Resources.dll
+C:\Users\Administrator\source\repos\GreyTools\GreyTools\bin\Debug\GreyTools.Resources.pdb

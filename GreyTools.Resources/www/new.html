@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+        <link rel="stylesheet" href="css/mdui.css">
+        <script src="js/mdui.js"></script>
+        <link href="icons/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <script src="js/jquery.js"></script>
+    </head>
+    <body class="mdui-theme-primary-purple">
+        <div class="mdui-appbar" style="z-index=3">
+            <div class="mdui-toolbar mdui-color-theme"  style="height:36px;margin-right: 0;margin-left:0px;-webkit-app-region:drag;">
+                <a href="javascript:;" class="mdui-typo-title mdui-text-color-white" style="margin-left: 18px;margin-right: 0px;">GreyTools</a>
+                <a href="javascript:;" id="title" class="mdui-text-color-white">首页</a>
+                <div class="mdui-toolbar-spacer"></div>
+                <div class="mdui-btn-group" style="margin-right: 0;-webkit-app-region:no-drag;">
+                    <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-text-color-white" n-ui-command="minimize"><i class="mdui-icon material-icons">remove</i></a>
+                    <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-text-color-white" n-ui-command="close"><i class="mdui-icon material-icons">close</i></a>
+                </div>
+            </div>
+        </div>
+        <div style="height: calc(100% - 36px);width:250px;overflow-y:auto;float:left;z-index=2">
+            <ul class="mdui-list mdui-list-dense">
+                <li class="mdui-subheader">GreyTools</li>
+                <li class="mdui-list-item mdui-ripple button_home" onclick="button_gt('home');">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                    <div class="mdui-list-item-content button_home_text">首页</div>
+                </li>
+                <li class="mdui-list-item mdui-ripple button_set"  onclick="button_gt('set');">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">settings</i>
+                    <div class="mdui-list-item-content button_set_text">设置</div>
+                </li>
+                <li class="mdui-list-item mdui-ripple button_info" onclick="button_gt('info');">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">info_outline</i>
+                    <div class="mdui-list-item-content button_info_text">关于</div>
+                </li>
+                <li class="mdui-subheader">工具</li>
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon"></i>
+                    <div class="mdui-list-item-content">获取/安装工具</div>
+                </li>
+            </ul>
+        </div>
+        <div style="height: calc(100% - 36px);overflow-y:auto;z-index=1;position: absolute;left:250px;top;36px;width:calc(100% - 250px);" id="main">
+            
+        </div>
+        <script src="js/greyCloud.js"></script>
+    </body>
+</html>

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43A02C65-6526-411C-82F6-F692CB4D7A00}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GreyTools.Resources</RootNamespace>
+    <AssemblyName>GreyTools.Resources</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\js\greyCloud.js" />
+    <EmbeddedResource Include="www\new.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\page\home.html" />
+    <EmbeddedResource Include="www\page\info.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\page\home.js" />
+    <EmbeddedResource Include="www\page\info.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\js\jquery.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\page\set.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\css\mdui.css" />
+    <EmbeddedResource Include="www\css\mdui.min.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\css\mdui.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\fonts\roboto\LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-Black.woff" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-Black.woff2" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-BlackItalic.woff" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-BlackItalic.woff2" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-Bold.woff" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-Bold.woff2" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-BoldItalic.woff" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-BoldItalic.woff2" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-Light.woff" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-Light.woff2" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-LightItalic.woff" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-LightItalic.woff2" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-Medium.woff" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-Medium.woff2" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-MediumItalic.woff" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-MediumItalic.woff2" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-Regular.woff" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-Regular.woff2" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-RegularItalic.woff" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-RegularItalic.woff2" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-Thin.woff" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-Thin.woff2" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-ThinItalic.woff" />
+    <EmbeddedResource Include="www\fonts\roboto\Roboto-ThinItalic.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\icons\material-icons\LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\icons\material-icons\MaterialIcons-Regular.ijmap" />
+    <EmbeddedResource Include="www\icons\material-icons\MaterialIcons-Regular.woff" />
+    <EmbeddedResource Include="www\icons\material-icons\MaterialIcons-Regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\js\mdui.js" />
+    <EmbeddedResource Include="www\js\mdui.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\js\mdui.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\icons\font-awesome\css\font-awesome.css" />
+    <EmbeddedResource Include="www\icons\font-awesome\css\font-awesome.min.css" />
+    <EmbeddedResource Include="www\icons\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="www\icons\font-awesome\HELP-US-OUT.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\icons\font-awesome\fonts\fontawesome-webfont.eot" />
+    <EmbeddedResource Include="www\icons\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <EmbeddedResource Include="www\icons\font-awesome\fonts\fontawesome-webfont.woff" />
+    <EmbeddedResource Include="www\icons\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <EmbeddedResource Include="www\icons\font-awesome\fonts\FontAwesome.otf" />
+    <EmbeddedResource Include="www\icons\font-awesome\less\animated.less" />
+    <EmbeddedResource Include="www\icons\font-awesome\less\bordered-pulled.less" />
+    <EmbeddedResource Include="www\icons\font-awesome\less\core.less" />
+    <EmbeddedResource Include="www\icons\font-awesome\less\fixed-width.less" />
+    <EmbeddedResource Include="www\icons\font-awesome\less\font-awesome.less" />
+    <EmbeddedResource Include="www\icons\font-awesome\less\icons.less" />
+    <EmbeddedResource Include="www\icons\font-awesome\less\larger.less" />
+    <EmbeddedResource Include="www\icons\font-awesome\less\list.less" />
+    <EmbeddedResource Include="www\icons\font-awesome\less\mixins.less" />
+    <EmbeddedResource Include="www\icons\font-awesome\less\path.less" />
+    <EmbeddedResource Include="www\icons\font-awesome\less\rotated-flipped.less" />
+    <EmbeddedResource Include="www\icons\font-awesome\less\screen-reader.less" />
+    <EmbeddedResource Include="www\icons\font-awesome\less\stacked.less" />
+    <EmbeddedResource Include="www\icons\font-awesome\less\variables.less" />
+    <EmbeddedResource Include="www\icons\font-awesome\scss\font-awesome.scss" />
+    <EmbeddedResource Include="www\icons\font-awesome\scss\_animated.scss" />
+    <EmbeddedResource Include="www\icons\font-awesome\scss\_bordered-pulled.scss" />
+    <EmbeddedResource Include="www\icons\font-awesome\scss\_core.scss" />
+    <EmbeddedResource Include="www\icons\font-awesome\scss\_fixed-width.scss" />
+    <EmbeddedResource Include="www\icons\font-awesome\scss\_icons.scss" />
+    <EmbeddedResource Include="www\icons\font-awesome\scss\_larger.scss" />
+    <EmbeddedResource Include="www\icons\font-awesome\scss\_list.scss" />
+    <EmbeddedResource Include="www\icons\font-awesome\scss\_mixins.scss" />
+    <EmbeddedResource Include="www\icons\font-awesome\scss\_path.scss" />
+    <EmbeddedResource Include="www\icons\font-awesome\scss\_rotated-flipped.scss" />
+    <EmbeddedResource Include="www\icons\font-awesome\scss\_screen-reader.scss" />
+    <EmbeddedResource Include="www\icons\font-awesome\scss\_stacked.scss" />
+    <EmbeddedResource Include="www\icons\font-awesome\scss\_variables.scss" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
