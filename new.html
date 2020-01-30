@@ -1,0 +1,263 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="http://cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="http://cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+</head>
+
+<body class="mdui-theme-primary-purple">
+    <div class="mdui-appbar">
+        <div class="mdui-toolbar mdui-color-theme" style="height:36px;margin-right: 0;margin-left:0px;z-index:-1">
+            <div class="mdui-btn-group" style="margin-left:0px;margin-right:5px">
+                <button type="button" class="mdui-btn mdui-text-color-white mdui-ripple mdui-ripple-white" id="back"><i
+                        class="mdui-icon material-icons">arrow_back</i></button>
+            </div>
+            <a href="javascript:;" class="mdui-typo-title" style="margin-left: 0px;margin-right: 0px;">GreyTools</a>
+            <a href="javascript:;" class="">首页</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <div class="mdui-btn-group" style="margin-right: 0;">
+                <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-text-color-white"><i
+                        class="mdui-icon material-icons">remove</i></a>
+                <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-text-color-white"><i
+                        class="mdui-icon material-icons">close</i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdui-btn-group" style="position:absolute;z-index:0;left:300px;top:0px;">
+        <button type="button" class="mdui-btn mdui-text-color-white mdui-ripple mdui-ripple-white" id="open">选择测试协议<i
+                class="mdui-icon material-icons">arrow_drop_down</i></button>
+
+        <ul class="mdui-list mdui-list-dense mdui-menu" id="menu">
+            <li class="mdui-subheader">通用</li>
+            <li class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title mdui-list-item-one-line">TCP协议</div>
+                </div>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title mdui-list-item-one-line">UDP协议</div>
+                </div>
+            </li>
+            <li class="mdui-subheader">浏览器</li>
+            <li class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title mdui-list-item-one-line">Http协议</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line">包括POST和GET请求</div>
+                </div>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title mdui-list-item-one-line">Websocket</div>
+                </div>
+            </li>
+            <li class="mdui-subheader">其他</li>
+            <li class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title mdui-list-item-one-line">Minecraft</div>
+                    <div class="mdui-list-item-text mdui-list-item-two-line">
+                        可以模拟真人登录游戏（暂时仅支持1.7.2），获取服务器信息和一些针对性压力测试，以及查询服务器真实IP。</div>
+                </div>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title mdui-list-item-one-line">端口扫描</div>
+                    <div class="mdui-list-item-text mdui-list-item-two-line">专门针对端口转发应用的工具，扫描IP的全部端口</div>
+                </div>
+            </li>
+        </ul>
+
+        <button type="button" class="mdui-btn mdui-text-color-white mdui-ripple mdui-ripple-white"><i
+                class="mdui-icon material-icons">format_align_right</i></button>
+        <button type="button" class="mdui-btn mdui-text-color-white mdui-ripple mdui-ripple-white"><i
+                class="mdui-icon material-icons">format_align_justify</i></button>
+    </div>
+
+    <div style="height: calc(100% - 36px);width:250px;overflow-y:auto;float:left">
+        <ul class="mdui-list mdui-list-dense" mdui-collapse="{accordion: true}">
+            <li class="mdui-subheader">GreyTools</li>
+            <li class="mdui-list-item mdui-ripple mdui-list-item-active">
+                <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                <div class="mdui-list-item-content">首页</div>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">settings</i>
+                <div class="mdui-list-item-content">设置</div>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">info_outline</i>
+                <div class="mdui-list-item-content">关于</div>
+            </li>
+            <li class="mdui-subheader">工具</li>
+            <li class="mdui-collapse-item mdui-collapse-item-open">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">people</i>
+                    <div class="mdui-list-item-content">Audience</div>
+                    <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    <li class="mdui-list-item mdui-ripple" style="position: relative;">
+                        Overview
+                    </li>
+                    <li class="mdui-list-item mdui-ripple">Language</li>
+                    <li class="mdui-list-item mdui-ripple">Location</li>
+                    <li class="mdui-list-item mdui-ripple">New vs Returning</li>
+                </ul>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+                <div class="mdui-chip" style="margin-left: -4px;"><span class="mdui-chip-icon">获</span></div>
+                <div class="mdui-list-item-content" style="margin-left: 30px;">获取/安装工具</div>
+            </li>
+        </ul>
+    </div>
+    <div style="height: calc(100% - 36px);overflow-y:auto;">
+        <div style="padding:30px">
+            <div class="mdui-typo-headline">Websocket测试</div>
+            <div class="mdui-shadow-10" style="margin-top:15px;width:350px;float:left">
+                <div class="mdui-tab mdui-tab-centered" mdui-tab>
+                    <a href="#websocket_c" class="mdui-ripple">连接</a>
+                    <a href="#websocket_s" class="mdui-ripple">测试/设置</a>
+                </div>
+                <div id="websocket_c" style="padding-left:10px;padding-right:10px;">
+                    <div class="mdui-textfield">
+                        <label class="mdui-textfield-label">服务端地址</label>
+                        <input class="mdui-textfield-input" type="text" />
+                    </div>
+                    <button type="button"
+                        class="mdui-btn mdui-text-color-white mdui-ripple mdui-ripple-white mdui-color-theme mdui-btn-raised"
+                        style="margin-top:2px;margin-bottom: 10px;">连接</button>
+                    <div class="mdui-textfield">
+                        <label class="mdui-textfield-label">发送内容</label>
+                        <textarea class="mdui-textfield-input"></textarea>
+                    </div>
+                    <button type="button"
+                        class="mdui-btn mdui-text-color-white mdui-ripple mdui-ripple-white mdui-color-theme mdui-btn-raised"
+                        style="margin-top:2px;margin-bottom: 10px;">发送</button>
+                </div>
+                <div id="websocket_s" >
+                    <!--
+                    <div style="padding-left:10px;padding-right:10px;">
+                        <div class="mdui-textfield">
+                            <label class="mdui-textfield-label">绑定地址（IP:端口）</label>
+                            <input class="mdui-textfield-input" type="text" />
+                        </div>
+                        <button type="button"
+                            class="mdui-btn mdui-text-color-white mdui-ripple mdui-ripple-white mdui-color-theme"
+                            style="margin-top:20px;margin-bottom: 20px;">启动</button>
+                        <div style="font-size: 16px;font-weight: 500;">连接列表</div>
+                    </div>
+                        <div class="mdui-table-fluid mdui-shadow-0" style="width:348px;margin-top:10px">
+                            <table class="mdui-table mdui-table-selectable">
+                                <thead>
+                                    <tr>
+                                        <th style="padding:10px;line-height:10px">操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="mdui-table-row-selected">
+                                        <td style="padding:2px;padding-left:10px">Frozen yogurt</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    -->
+                    <ul class="mdui-list mdui-list-dense" >
+                        <li class="mdui-subheader">测试项</li>
+                        <li class="mdui-list-item mdui-ripple">
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-title mdui-list-item-one-line">连接数测试</div>
+                                <div class="mdui-list-item-text mdui-list-item-one-line">对服务端建立大量连接，测试服务端的承受能力</div>
+                            </div>
+                        </li>
+                        <li class="mdui-list-item mdui-ripple">
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-title mdui-list-item-one-line">数据包测试</div>
+                                <div class="mdui-list-item-text mdui-list-item-one-line">发送多个指定大小的数据包</div>
+                            </div>
+                        </li>
+                        <li class="mdui-list-item mdui-ripple">
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-title mdui-list-item-one-line">刷屏</div>
+                                <div class="mdui-list-item-text mdui-list-item-one-line">针对部分基于websocket的聊天室。快速发送指定的文字</div>
+                            </div>
+                        </li>
+                        <li class="mdui-subheader">其他</li>
+                        <li class="mdui-list-item mdui-ripple">
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-title">启用浏览器Api</div>
+                                
+                                <div class="mdui-list-item-text mdui-list-item-two-line">
+                                    开启后将使用Chrome自带的websocketAPI。可以提升一定的速度，但是一些功能会无法实现</div>
+                            </div>
+                            <label class="mdui-switch">
+                                <input type="checkbox"/>
+                                    <i class="mdui-switch-icon"></i>
+                                  </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mdui-card mdui-shadow-10" style="margin-left:370px;margin-top:15px;margin-right:20px;height:680px">
+                <div class="mdui-card-primary mdui-color-theme" style="padding:15px">
+                    <div class="mdui-card-primary-title">响应消息</div>
+                    <div class="mdui-typo-subheading-opacity">由GreyCommand提供服务
+                    </div>
+                </div>
+                <div style="padding:10px;">
+                    
+                </div>
+    
+            </div>
+        </div>
+        
+    </div>
+
+
+    <button class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme" id="layer"><i
+            class="mdui-icon material-icons">layers</i></button>
+    <ul class="mdui-menu" id="layer_menu">
+        <li class="mdui-menu-item">
+            <a href="javascript:;" class="mdui-ripple">
+                <i class="mdui-menu-item-icon mdui-icon material-icons">add</i>
+                打开新的界面
+            </a>
+        </li>
+        <li class="mdui-menu-item">
+            <a href="javascript:;" class="mdui-ripple">
+                <i class="mdui-menu-item-icon mdui-icon material-icons">clear</i>
+                关闭
+            </a>
+        </li>
+        <li class="mdui-menu-item">
+            <a href="javascript:;" class="mdui-ripple">
+                <i class="mdui-menu-item-icon mdui-icon material-icons">clear_all</i>
+                关闭全部
+            </a>
+        </li>
+
+        <li class="mdui-menu-item">
+            <a href="javascript:;" class="mdui-ripple">
+                <i class="mdui-menu-item-icon mdui-icon material-icons">info_outline</i>
+                当前进程信息
+            </a>
+        </li>
+    </ul>
+    <script>
+        var inst = new mdui.Menu('#open', '#menu');
+        var $$ = mdui.JQ;
+        document.getElementById('open').addEventListener('click', function () {
+            inst.open();
+            $$("#menu").height("300px");
+            $$("#menu").width("250px");
+        });
+        var inst1 = new mdui.Menu('#layer', '#layer_menu');
+        document.getElementById('layer').addEventListener('click', function () {
+            inst1.open();
+            $$("#layer_menu").width("180px");
+        });
+    </script>
+</body>
+
+</html>
