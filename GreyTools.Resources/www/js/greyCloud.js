@@ -60,3 +60,9 @@ function button_gt(id){
 
 ///初始化
 button_gt("home");
+//layer按钮的设置
+var inst1 = new mdui.Menu('#layer', '#layer_menu');
+document.getElementById('layer').addEventListener('click', function () {
+    inst1.open();
+    $("#layer_menu").width("180px");
+});

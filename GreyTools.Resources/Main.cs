@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace GreyTools.Resources
 {
-    public class Class1
+    /// <summary>
+    /// GreyTools的UI库
+    /// </summary>
+    public class Main
     {
         public static System.Reflection.Assembly GetSchemeAssembley()
         {

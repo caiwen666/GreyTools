@@ -1,4 +1,4 @@
-<html>
+﻿<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
         <link rel="stylesheet" href="css/mdui.css">
@@ -7,7 +7,7 @@
         <script src="js/jquery.js"></script>
     </head>
     <body class="mdui-theme-primary-purple">
-        <div class="mdui-appbar" style="z-index=3">
+        <div class="mdui-appbar" style="z-index:3" onselectstart="return false">
             <div class="mdui-toolbar mdui-color-theme"  style="height:36px;margin-right: 0;margin-left:0px;-webkit-app-region:drag;">
                 <a href="javascript:;" class="mdui-typo-title mdui-text-color-white" style="margin-left: 18px;margin-right: 0px;">GreyTools</a>
                 <a href="javascript:;" id="title" class="mdui-text-color-white">首页</a>
@@ -18,7 +18,7 @@
                 </div>
             </div>
         </div>
-        <div style="height: calc(100% - 36px);width:250px;overflow-y:auto;float:left;z-index=2">
+        <div style="height: calc(100% - 36px);width:250px;overflow-y:auto;float:left;z-index:2" onselectstart="return false">
             <ul class="mdui-list mdui-list-dense">
                 <li class="mdui-subheader">GreyTools</li>
                 <li class="mdui-list-item mdui-ripple button_home" onclick="button_gt('home');">
@@ -43,6 +43,53 @@
         <div style="height: calc(100% - 36px);overflow-y:auto;z-index=1;position: absolute;left:250px;top;36px;width:calc(100% - 250px);" id="main">
             
         </div>
+
+
+        <div class="mdui-dialog" id="firstLoad">
+            <div class="mdui-dialog-title">正在加载工具</div>
+            <div class="mdui-dialog-content">
+                <div class="mdui-progress">
+                    <div class="mdui-progress-determinate" style="width: 0%;" id="progress_bar"></div>
+                </div>
+                <div style="margin-top: 15px;margin-bottom: 20px;">
+                    <div style="float:left" id="state">准备</div>
+                    <div style="float:right" id="progress">3/10</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <button class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme mdui-text-color-white" id="layer">
+            <i class="mdui-icon material-icons">layers</i>
+        </button>
+        <ul class="mdui-menu" id="layer_menu">
+            <li class="mdui-menu-item">
+                <a href="javascript:;" class="mdui-ripple">
+                    <i class="mdui-menu-item-icon mdui-icon material-icons">add</i>
+                    打开新的界面
+                </a>
+            </li>
+            <li class="mdui-menu-item">
+                <a href="javascript:;" class="mdui-ripple">
+                    <i class="mdui-menu-item-icon mdui-icon material-icons">clear</i>
+                    关闭
+                </a>
+            </li>
+            <li class="mdui-menu-item">
+                <a href="javascript:;" class="mdui-ripple">
+                    <i class="mdui-menu-item-icon mdui-icon material-icons">clear_all</i>
+                    关闭全部
+                </a>
+            </li>
+
+            <li class="mdui-menu-item">
+                <a href="javascript:;" class="mdui-ripple">
+                    <i class="mdui-menu-item-icon mdui-icon material-icons">info_outline</i>
+                    当前任务信息
+                </a>
+            </li>
+        </ul>
         <script src="js/greyCloud.js"></script>
     </body>
 </html>
