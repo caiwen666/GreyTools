@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreyTools", "GreyTools\Grey
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreyTools.Resources", "GreyTools.Resources\GreyTools.Resources.csproj", "{43A02C65-6526-411C-82F6-F692CB4D7A00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demo", "demo\demo.csproj", "{0B241C5B-B9D9-4A96-8DD0-558F9E3B3997}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,13 +31,6 @@ Global
 		{43A02C65-6526-411C-82F6-F692CB4D7A00}.Release|Any CPU.Build.0 = Release|Any CPU
 		{43A02C65-6526-411C-82F6-F692CB4D7A00}.Release|x86.ActiveCfg = Release|x86
 		{43A02C65-6526-411C-82F6-F692CB4D7A00}.Release|x86.Build.0 = Release|x86
-		{0B241C5B-B9D9-4A96-8DD0-558F9E3B3997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0B241C5B-B9D9-4A96-8DD0-558F9E3B3997}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0B241C5B-B9D9-4A96-8DD0-558F9E3B3997}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{0B241C5B-B9D9-4A96-8DD0-558F9E3B3997}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0B241C5B-B9D9-4A96-8DD0-558F9E3B3997}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0B241C5B-B9D9-4A96-8DD0-558F9E3B3997}.Release|x86.ActiveCfg = Release|Any CPU
-		{0B241C5B-B9D9-4A96-8DD0-558F9E3B3997}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

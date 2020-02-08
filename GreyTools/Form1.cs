@@ -1,12 +1,14 @@
 ﻿using NetDimension.NanUI;
 using Newtonsoft.Json;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -21,6 +23,8 @@ namespace GreyTools
         public static string tools;
         public c_info ci=new c_info();
         public C_Tools ct = new C_Tools();
+        Dictionary<string, Object> dllList = new Dictionary<string, Object>();
+        Dictionary<string, Type> _dllList = new Dictionary<string, Type>();
         public Form1() : base("http://tools.greycloud.com/www/new.html")
         {
             //加载info
@@ -49,6 +53,18 @@ namespace GreyTools
                 if (stringArgument != null)
                 {
                     System.Diagnostics.Process.Start(stringArgument.StringValue);
+                }
+            };
+
+            //Tools管理器
+            var ToolsManager = GlobalObject.AddObject("ToolsManager");
+            var runTools = ToolsManager.AddFunction("runTools");
+            runTools.Execute += (func, args) =>
+            {
+                var stringArgument = args.Arguments.FirstOrDefault(p => p.IsString);
+                if (stringArgument != null)
+                {
+                    this.runTools(stringArgument.StringValue);
                 }
             };
         }
@@ -81,6 +97,28 @@ namespace GreyTools
             {
                 Chromium.ShowDevTools();
             }
+        }
+        public bool runTools(string name)
+        {
+            if (dllList.ContainsKey(name))
+            {
+                return false;
+            }
+            //挂载dll
+            Assembly asm = Assembly.LoadFrom("tools\\"+name+"\\"+"ui.dll");
+            //读取类型
+            Type t = asm.GetType(name + ".Main");
+            //创建对象信息
+            object o = Activator.CreateInstance(t);
+            Bootstrap.RegisterAssemblyResources(asm, null, name+".greycloud.com");
+            dllList.Add(name, o);
+            _dllList.Add(name, t);
+            //配置
+            t.GetField("registerFunc").SetValue(o, registerFunc);
+        }
+        public void registerFunc()
+        {
+
         }
     }
     public class c_info

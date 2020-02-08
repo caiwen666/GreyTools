@@ -32,19 +32,24 @@ function setPage(name,tname){
 	$("#title").text(name);
 }
 
+//设置选中
+function setClick(id) {
+    if (activeList != null) {//撤销之前的选中
+        $("." + activeList).removeClass("mdui-list-item-active");
+        $("." + activeList + "_text").removeClass("mdui-text-color-theme");
+    }
+    //应用现在的选中
+    activeList = id;
+    $("." + activeList).addClass("mdui-list-item-active");
+    $("." + activeList + "_text").addClass("mdui-text-color-theme");
+    $("#main").css("left", "-100px");//动画准备
+    $("#main").css("opacity", "0");
+}
+
 ///设置点击事件(private)
 ///id，目标的名称
-function button_gt(id){
-	if(activeList!=null){//撤销之前的选中
-		$("."+activeList).removeClass("mdui-list-item-active");
-		$("."+activeList+"_text").removeClass("mdui-text-color-theme");
-	}
-	//应用现在的选中
-	activeList="button_"+id;
-	$("."+activeList).addClass("mdui-list-item-active");
-	$("."+activeList+"_text").addClass("mdui-text-color-theme");
-	$("#main").css("left","-100px");//动画准备
-	$("#main").css("opacity","0");
+function button_gt(id) {
+    setClick("button_" + id)
 	setPage($("."+activeList+"_text").text(),id);//设置
 	//执行界面附带的脚本
 	$.getScript("page/"+id+".js");
@@ -62,7 +67,16 @@ function button_gt(id){
 button_gt("home");
 //layer按钮的设置
 var inst1 = new mdui.Menu('#layer', '#layer_menu');
+//layer按钮
 document.getElementById('layer').addEventListener('click', function () {
     inst1.open();
     $("#layer_menu").width("180px");
 });
+
+//运行工具
+function runTools(name) {
+    //设置选中
+    setClick("button_tools_" + name);
+    //运行
+
+}
