@@ -55,6 +55,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="NetDimension.NanUI, Version=0.6.3239.36874, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NetDimension.NanUI.0.6.3239.4\lib\NetDimension.NanUI.dll</HintPath>

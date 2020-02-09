@@ -1,7 +1,9 @@
 ﻿//greyTools的基本库
 
 //全局声明
-activeList=null;//当前选中的列表的class
+activeList = null;//当前选中的列表的class
+tools_map = null;
+tools_map = new Map();
 
 ///发送控制台调试信息（debug）
 ///level：消息等级，1信息，2注意，3错误
@@ -56,8 +58,8 @@ function button_gt(id) {
 	//执行动画
 	setTimeout(function () {
 		$("#main").animate({
-		left:'250px',
-		opacity:'1'
+		    left:'250px',
+		    opacity:'1'
 		});
 	}, 500);
 	mdui.mutation();
@@ -78,5 +80,27 @@ function runTools(name) {
     //设置选中
     setClick("button_tools_" + name);
     //运行
-
+    if (ToolsManager.runTools(name)) {
+        //返回true就说明已经在后端加载完毕,我们在前端直接调用即可
+        //我们加个map做缓存,如果map中已经有tools的对象了,我们就不加载它,反之就加载
+        if (!tools_map.has(name)) {
+            $.getScript('https://' + name + '.greycloud.com/main/main.js', function () {
+                tools_map.set(name, new toolsMain());
+            });
+        } 
+        //然后加载界面
+        var htmlobj = $.ajax({ url: 'https://' + name + '.greycloud.com/main/main.html', async: false });
+        $("#main").html(htmlobj.responseText);
+        tools_map.get(name).Load();
+        $("#title").text(tools_map.get(name).name);
+        //然后是动画
+        setTimeout(function () {
+            $("#main").animate({
+                left: '250px',
+                opacity: '1'
+            });
+        }, 500);
+        mdui.mutation();
+    }
 }
+
